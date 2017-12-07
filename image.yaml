@@ -1,0 +1,26 @@
+schema_version: 1
+
+name: goldmann/tomcat
+version: 1.0
+from: centos:7
+description: "Tomcat 8 image"
+
+modules:
+  repositories:
+    # Add local modules located next to the image descriptor
+    # These modules are specific to the image we build and are not meant
+    # to be shared
+    - path: modules
+
+    # Add a shared module repository located on GitHub. This repository
+    # can contain several modules.
+    - git:
+        url: https://github.com/goldmann/concreate-common-module.git
+        ref: master
+
+  # Install selected modules (in order)
+  install:
+    - name: jdk8
+    - name: user
+    - name: tomcat
+
