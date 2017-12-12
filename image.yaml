@@ -15,7 +15,7 @@ modules:
     # Add a shared module repository located on GitHub. This repository
     # can contain several modules.
     - git:
-        url: https://github.com/goldmann/concreate-common-module.git
+        url: https://github.com/concrt/example-common-module.git
         ref: master
 
   # Install selected modules (in order)
