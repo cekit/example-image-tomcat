@@ -1,6 +1,6 @@
 schema_version: 1
 
-name: goldmann/tomcat
+name: cekit/example-tomcat
 version: 1.0
 from: centos:7
 description: "Tomcat 8 image"
